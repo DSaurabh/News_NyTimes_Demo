@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8oX-tl-OZT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="News_NyTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Popular Section" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3Q-Dm-Ty5">
+                                <rect key="frame" x="0.0" y="89" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UkQ-Xx-EcN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ry8-sX-H2Q">
+                                <rect key="frame" x="8" y="127" width="398" height="727"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" systemColor="linkColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ry8-sX-H2Q" secondAttribute="trailing" constant="8" id="1oP-zo-FiJ"/>
+                            <constraint firstItem="f3Q-Dm-Ty5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3fr-GL-mYA"/>
+                            <constraint firstItem="ry8-sX-H2Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Fc6-RU-4SJ"/>
+                            <constraint firstItem="ry8-sX-H2Q" firstAttribute="top" secondItem="f3Q-Dm-Ty5" secondAttribute="bottom" constant="8" id="Kha-pC-6sR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ry8-sX-H2Q" secondAttribute="bottom" constant="8" id="alW-rX-ZAW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f3Q-Dm-Ty5" secondAttribute="trailing" id="gHc-q5-rAH"/>
+                            <constraint firstItem="f3Q-Dm-Ty5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="nh6-Wt-9IL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="afA-AH-fRI" userLabel="Most PopularSection"/>
+                    <connections>
+                        <outlet property="newsTableView" destination="ry8-sX-H2Q" id="v3Q-fh-rgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36.231884057971016" y="-3.3482142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jG7-eK-T9k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8oX-tl-OZT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mgf-J7-FTx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Y5Q-LD-XV4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIb-rq-c9q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-946.37681159420299" y="-3.3482142857142856"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="mNL-Fk-gaD">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="3k4-Np-pi5" customClass="DetailViewController" customModule="News_NyTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XsD-1M-kog">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYG-hb-DWy">
+                                <rect key="frame" x="5" y="49" width="404" height="808"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qKx-5e-e1A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qKx-5e-e1A" firstAttribute="bottom" secondItem="QYG-hb-DWy" secondAttribute="bottom" constant="5" id="KBH-0t-KQz"/>
+                            <constraint firstItem="qKx-5e-e1A" firstAttribute="trailing" secondItem="QYG-hb-DWy" secondAttribute="trailing" constant="5" id="Ofu-l4-mIB"/>
+                            <constraint firstItem="QYG-hb-DWy" firstAttribute="leading" secondItem="qKx-5e-e1A" secondAttribute="leading" constant="5" id="hUf-O2-qmR"/>
+                            <constraint firstItem="QYG-hb-DWy" firstAttribute="top" secondItem="qKx-5e-e1A" secondAttribute="top" constant="5" id="w9D-60-djx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="QYG-hb-DWy" id="8ZE-1y-1Kq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Nv-Rw-6Zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="10"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
